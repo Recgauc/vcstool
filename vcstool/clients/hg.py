@@ -7,6 +7,9 @@ from vcstool.executor import USE_COLOR
 from .vcs_base import VcsClientBase
 from ..util import rmtree
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 
 class HgClient(VcsClientBase):
 
